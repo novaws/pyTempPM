@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyTempPM"
+dynamic = ["version"]
+
+dependencies = [
+  "requests",
+  "beautifulsoup4",
+]
+
+requires-python = ">=3.6"
+authors = [
+  {name = "Nova", email = "info@nova.ws"},
+]
+
+description = "A simple python library work with Temp.PM service"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE.txt"}
+
+keywords = ["notes", "cryptography", "private message", "self-destroy", "self-destruct"]
+classifiers = [
+  "Programming Language :: Python :: 3.6",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://nova.ws"
+Repository = "https://github.com/novaws/pyTempPM"
+
+[tool.setuptools.dynamic]
+version = {attr = "pyTempPM.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
